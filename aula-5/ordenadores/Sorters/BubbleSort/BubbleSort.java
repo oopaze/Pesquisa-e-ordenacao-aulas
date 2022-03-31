@@ -16,9 +16,10 @@ public class BubbleSort extends BaseSorter {
     Integer i; 
     Integer j;
     Integer length = this.sortedArray.size() - 1;
+    Integer progress = 0;
 
     for (j = 0; j < length; j++) {
-      for (i = 0; i < length; i++) {
+      for (i = 0; i < length - progress; i++) {
         Integer num = this.sortedArray.get(i);
         Integer nextNum = this.sortedArray.get(i + 1);
         
@@ -27,6 +28,8 @@ public class BubbleSort extends BaseSorter {
           this.sortedArray.set(i + 1, num);
         }
       }
+
+      progress += 1;
     }
 
     return this.sortedArray;
