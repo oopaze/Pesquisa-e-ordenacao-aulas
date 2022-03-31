@@ -3,6 +3,7 @@ import java.util.List;
 
 import Sorters.BubbleSort.BubbleSort;
 import Sorters.CountingSort.CountingSort;
+import Sorters.MergeSort.MergeSort;
 
 public class Main {
   public static void main(String args[]) {
@@ -17,5 +18,10 @@ public class Main {
       new ArrayList<>(baseArray)
     );
     CountingSortInstance.run(true);
+
+    MergeSort MergeSortInstance = new MergeSort(
+      new ArrayList<>(baseArray)
+    );
+    MergeSortInstance.run(true);
   }
 }
